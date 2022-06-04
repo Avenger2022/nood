@@ -16,10 +16,31 @@ public class UserNameImpl implements UserName {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","cape");
-            String sql="select from  where username=? and password=?";//缺少表名
+            String sql="select from zb_user where username=? and password=?";//缺少表名bvc
             ps=conn.prepareStatement(sql);
+            ps.setString(1,username);
+            ps.setString(2,password);
+            rs= ps.executeQuery();
+            while (rs.next()){
+                user=new User();
+                user.setUid(rs.getInt("Uid"));
+                user.setUsername(rs.getString("username"));
+                user.setPassword(rs.getString("password"));
+                user.setAddress(rs.getString("address"));
+                user.setSex(rs.getString("sex"));
+                user.setEmail(rs.getString("email"));
+                user.setIphone(rs.getString("iphone"));
+                user.setName(rs.getString("name"));
+                user.setAge(rs.getInt("age"));
+                user.setRelationship(rs.getString("relationship"));
+                user.setBirth(rs.getString("birth"));
+            }
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
+        }finally {
+            rs.close();
+            ps.close();
+            conn.close();
         }
     }
 }

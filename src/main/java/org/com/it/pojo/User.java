@@ -1,6 +1,7 @@
 package org.com.it.pojo;
 
 public class User {
+    private int Uid;//用户ID
     private String username;//用户名
     private String password;//密码
     private String sex;//性别
@@ -10,6 +11,16 @@ public class User {
     private int age;//年龄
     private String address;//地址
     private String relationship;//关系
+
+    public String getBirth() {
+        return birth;
+    }
+
+    public void setBirth(String birth) {
+        this.birth = birth;
+    }
+
+    private  String birth;//用户生日
 
     public String getUsername() {
         return username;
@@ -83,10 +94,19 @@ public class User {
         this.relationship = relationship;
     }
 
+    public int getUid() {
+        return Uid;
+    }
+
+    public void setUid(int uid) {
+        Uid = uid;
+    }
+
     @Override
     public String toString() {
         return "User{" +
-                "username='" + username + '\'' +
+                "Uid=" + Uid +
+                ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", sex='" + sex + '\'' +
                 ", email='" + email + '\'' +
@@ -95,6 +115,7 @@ public class User {
                 ", age=" + age +
                 ", address='" + address + '\'' +
                 ", relationship='" + relationship + '\'' +
+                ", birth='" + birth + '\'' +
                 '}';
     }
 }
