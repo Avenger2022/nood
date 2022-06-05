@@ -2,14 +2,15 @@ function a() {
 	var username = $('#username').val()
 	var a = /^[\u4e00-\u9fa5]{1,6}$/
 	var flag = a.test(username)
+
 	if (flag) {
 		$('#username').val(username)
-		$('#username').after("<span id='username-a'>✔</span>")
-		$('#a-username').remove()
+		$('.span:eq(0)').text('✔')
 	} else {
-		$('#username').val('')
-		$('#username-a').remove()
-		$('#username').after("<span id='a-username'>✖</span>")
+		$('.span:eq(0)').text('✖')
+	}
+	if (username == '') {
+		$('.span:eq(0)').text('*')
 	}
 
 }
@@ -20,12 +21,12 @@ function b() {
 	var flag = b.test(tall)
 	if (flag) {
 		$('#tall').val(tall)
-		$('#tall').after("<span id='tall-b'>✔</span>")
-		$('#b-tall').remove()
+		$('.span:eq(1)').text('✔')
 	} else {
-		$('#tall').val('')
-		$('#tall-b').remove()
-		$('#tall').after("<span id='b-tall'>✖</span>")
+		$('.span:eq(1)').text('✖')
+	}
+	if (tall == '') {
+		$('.span:eq(1)').text('*')
 	}
 }
 
@@ -35,12 +36,12 @@ function c() {
 	var flag = b.test(password)
 	if (flag) {
 		$('#password').val(password)
-		$('#password').after("<span id='password-c'>✔</span>")
-		$('#c-password').remove()
+		$('.span:eq(2)').text('✔')
 	} else {
-		$('#password').val('')
-		$('#password-c').remove()
-		$('#password').after("<span id='c-password'>✖</span>")
+		$('.span:eq(2)').text('✖')
+	}
+	if (password == '') {
+		$('.span:eq(2)').text('*')
 	}
 }
 
@@ -49,12 +50,12 @@ function d() {
 	var pas2 = $('#password2').val()
 	if (password == pas2 && pas2 != '') {
 		$('#password2').val(password)
-		$('#password2').after("<span id='password2-d'>✔</span>")
-		$('#d-password2').remove()
-	} else {
-		$('#password2').val('')
-		$('#password2-d').remove()
-		$('#password2').after("<span id='d-password2'>✖</span>")
+		$('.span:eq(3)').text('✔')
+	} else{
+		$('.span:eq(3)').text('✖')
+	}
+	if (password2 == '') {
+		$('.span:eq(3)').text('*')
 	}
 }
 
@@ -63,13 +64,13 @@ function e() {
 	var b = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
 	var flag = b.test(email)
 	if (flag) {
-		$('#Email').after("<span id='Email-e'>✔</span>")
+
 		$('#Email').val(email)
-		$('#e-Email').remove()
-		}
-		else {
-			$('#Email').val('')
-			$('#Email-e').remove()
-			$('#Email').after("<span id='e-Email'>✖</span>")
-		}
+		$('.span:eq(4)').text('✔')
+	} else {
+		$('.span:eq(4)').text('✖')
 	}
+	if (email == '') {
+		$('.span:eq(4)').text('*')
+	}
+}
