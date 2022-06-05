@@ -1,11 +1,11 @@
 package org.com.it.Dao.Impl;
 
-import org.com.it.Dao.UserName;
+import org.com.it.Dao.UserMapper;
 import org.com.it.pojo.User;
 
 import java.sql.*;
 
-public class UserNameImpl implements UserName {
+public class UserNameImpl implements UserMapper {
     //用户登录
     @Override
     public User LoginUser(String username, String password) {

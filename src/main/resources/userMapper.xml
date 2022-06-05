@@ -1,0 +1,9 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.com.it.Dao.UserMapper">
+    <select id="LoginUser" resultType="org.com.it.pojo.User">
+        select * from user where username=#{username} and password=#{password}
+    </select>
+</mapper>
