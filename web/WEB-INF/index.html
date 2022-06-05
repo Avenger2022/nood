@@ -6,7 +6,7 @@
 		<script src="js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="css/css.css" />
 		<script src="js/js.js" type="text/javascript" charset="utf-8"></script>
-		
+
 	</head>
 	<body>
 		<div class="contioner">
@@ -28,37 +28,41 @@
 				<div class="card">
 					<div class="header">
 						<h1>欢迎注册</h1>
-						<span>已有账号？</span><a href="submit.html">登录</a>
+						<span>已有账号？</span><a href="">登录</a>
 					</div>
 					<div class="body">
 						<form method="post">
 							<div>
-								用&nbsp;户&nbsp;名&nbsp;：<input  type="text" id="username" onblur="a()" placeholder="请输入1-6个汉字"/>
+								用&nbsp;户&nbsp;名&nbsp;：<input type="text" id="username" onblur="a()"
+									placeholder="请输入1-6个汉字" /><span class="span">*</span>
 							</div>
-							<div >
-								手&nbsp;机&nbsp;号&nbsp;：<input id="tall" type="text" onblur="b()" placeholder="请输入长度为12不以0开头的电话号码"/>
+							<div>
+								手&nbsp;机&nbsp;号&nbsp;：<input id="tall" type="text" onblur="b()"
+									placeholder="请输入长度为12不以0开头的电话号码" /><span class="span">*</span>
 							</div>
-							<div >
-								密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：<input id="password" type="password" onblur="c()" placeholder="以字母开头，长度在6~18之间的字母、数字和下划线" />
+							<div>
+								密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：<input id="password" type="password" onblur="c()"
+									placeholder="以字母开头，长度在6~18之间的字母、数字和下划线" /><span class="span">*</span>
 
 							</div>
-							<div >
-								确认密码：<input type="password" id="password2" onblur="d()" placeholder="请确认密码"/>
-							
+							<div>
+								确认密码：<input type="password" id="password2" onblur="d()" placeholder="请确认密码" />
+								<span class="span">*</span>
 							</div>
-							<div >
-								邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：<input id="Email" type="text" onblur="e()" placeholder="请输入有效的邮箱"/>
-
+							<div>
+								邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：<input id="Email" type="text" onblur="e()"
+									placeholder="请输入有效的邮箱" />
+								<span class="span">*</span>
 							</div>
 
 							<div class="submit">
 								<input type="submit" value="注册" />
 							</div>
-							
+
 
 						</form>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
