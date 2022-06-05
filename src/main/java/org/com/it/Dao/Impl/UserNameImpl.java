@@ -8,7 +8,7 @@ import java.sql.*;
 public class UserNameImpl implements UserName {
     //用户登录
     @Override
-    public void LoginUser(String username, String password) throws SQLException {
+    public User LoginUser(String username, String password) {
         Connection conn=null;
         PreparedStatement ps =null;
         ResultSet rs =null;
@@ -35,12 +35,25 @@ public class UserNameImpl implements UserName {
                 user.setRelationship(rs.getString("relationship"));
                 user.setBirth(rs.getString("birth"));
             }
-        } catch (ClassNotFoundException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }finally {
-            rs.close();
-            ps.close();
-            conn.close();
+            try {
+                rs.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+            try {
+                ps.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
         }
+        return user;
     }
 }
