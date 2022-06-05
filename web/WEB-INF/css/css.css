@@ -1,0 +1,114 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: url(../img/注册.jpg);
+	background-size: cover;
+	width: 100vw;
+	height: 100vh;
+}
+
+.contioner {
+	display: flex;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.left-contioner {
+	color: white;
+}
+
+.left-contioner .header {
+	margin-top: 100px;
+	border-radius: 10px;
+
+}
+
+.left-contioner .body {
+	margin-left: 100px;
+	margin-top: 200px;
+	border-radius: 10px;
+
+}
+
+.left-contioner .body h2 {
+	margin-bottom: 20px;
+	font-size: 50px;
+}
+
+.left-contioner .body p {
+	margin-left: 50px;
+	font-size: 25px;
+}
+
+.left-contioner .footer {
+	margin-top: 60%;
+
+}
+
+.left-contioner .footer span {
+	margin-left: 20px;
+	font-size: 10px;
+	opacity: 0.6;
+
+}
+
+.right-contioner {
+	margin-left: 300px;
+	margin-top: 100px;
+}
+
+.right-contioner .card {
+	position: absolute;
+	width: 500px;
+	height: 600px;
+	background-color: #FFFFFF;
+	border-radius: 20px;
+	opacity: 0.8;
+}
+
+.right-contioner .card .header {
+	margin-top: 50px;
+	margin-left: 50px;
+}
+
+.right-contioner .card .header span {
+
+	opacity: 0.5;
+}
+
+.right-contioner .card .header a {
+	text-decoration: none;
+	color: blue;
+}
+
+.right-contioner .card .body {
+	margin-top: 70px;
+	margin-left: 50px;
+	
+}
+.right-contioner .card .body div{
+	margin-bottom: 35px;
+	
+}
+.right-contioner .card .body div input{
+	outline: none;
+	width: 70%;
+	height: 30px;
+	
+	
+}
+.right-contioner .card .body .submit input{
+	width: 80%;
+	height: 50px;
+	border-radius: 20px;
+	background-color: #aaaaff;
+	border: 0;
+	color: white;
+	opacity: 0.8;
+	font-size: 20px;
+	margin-left: 20px;
+	
+}
