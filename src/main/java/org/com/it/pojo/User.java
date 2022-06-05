@@ -11,16 +11,14 @@ public class User {
     private int age;//年龄
     private String address;//地址
     private String relationship;//关系
+    private  String birth;//用户生日
 
     public String getBirth() {
         return birth;
     }
-
     public void setBirth(String birth) {
         this.birth = birth;
     }
-
-    private  String birth;//用户生日
 
     public String getUsername() {
         return username;
